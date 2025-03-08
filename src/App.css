@@ -1,0 +1,297 @@
+/* Modern Dark Theme with Glassmorphism */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(45deg, #0f0f1f, #1a1a2f);
+  color: #e0e0ff;
+  overflow: hidden;
+}
+
+/* Global Layout with Gradient Background */
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: radial-gradient(circle at 80% 20%, #2a2a4a 0%, #0f0f1f 100%);
+}
+
+/* Futuristic Glass Sidebar */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(160deg, rgba(45, 45, 85, 0.9), rgba(30, 30, 60, 0.9));
+  backdrop-filter: blur(12px);
+  padding: 30px 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar h2 {
+  font-size: 28px;
+  background: linear-gradient(45deg, #7d5fff, #aa80ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* Holographic Navigation Links */
+.sidebar nav a {
+  display: block;
+  padding: 16px 24px;
+  margin: 10px 0;
+  color: #d0d0ff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar nav a:hover {
+  background: rgba(125, 95, 255, 0.15);
+  transform: translateX(8px);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar nav a.active {
+  background: linear-gradient(90deg, rgba(125, 95, 255, 0.3), transparent);
+  border-left: 4px solid #7d5fff;
+}
+
+/* Content Area with Cyberpunk Flair */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background: transparent;
+}
+
+.content h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 800;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #7d5fff, #aa80ff);
+}
+
+/* Futuristic Input Field */
+.content input {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 30px;
+  color: #e0e0ff;
+  transition: all 0.3s ease;
+}
+
+.content input:focus {
+  outline: none;
+  border-color: #7d5fff;
+  box-shadow: 0 0 15px rgba(125, 95, 255, 0.3);
+}
+
+/* Neon Song Grid */
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Holographic Song Cards for Favorites and Playlists */
+.song-card {
+  background: linear-gradient(145deg, rgba(45, 45, 85, 0.6), rgba(30, 30, 60, 0.8));
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.song-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.song-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.song-card:hover::before {
+  left: 100%;
+}
+
+/* Glowing Image Container */
+.song-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(125, 95, 255, 0.2);
+}
+
+/* Cyberpunk Text Styles */
+.song-card h3 {
+  font-size: 20px;
+  margin: 10px 0 6px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.song-card p {
+  font-size: 14px;
+  color: #a0a0c0;
+  margin: 0 0 12px;
+}
+
+/* Glowing Buttons Container */
+.song-card-buttons {
+  display: flex;
+  gap: 12px; /* Space between buttons */
+  margin-top: 15px; /* Space above the container */
+  justify-content: center; /* Centers buttons horizontally */
+  align-items: center; /* Vertically centers buttons */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Glowing Button Styling for Buttons Inside song-card-buttons */
+.song-card-buttons button {
+  background: linear-gradient(45deg, #7d5fff, #aa80ff); /* Gradient background */
+  border: none;
+  padding: 10px; /* Adjusted padding for icon-only buttons */
+  border-radius: 8px;
+  color: white; /* Ensures icon color is white if applicable */
+  font-weight: 600; /* Bold weight for consistency */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center; /* Vertically centers the icon */
+  justify-content: center; /* Horizontally centers the icon */
+  position: relative; /* For glowing effect layering */
+  overflow: hidden; /* Ensures glow stays within bounds */
+  width: 40px; /* Fixed width for consistency */
+  height: 40px; /* Fixed height for consistency */
+  box-shadow: 0 0 5px rgba(125, 95, 255, 0.4); /* Subtle base glow */
+}
+
+/* Enhanced Glowing Effect on Hover */
+.song-card-buttons button:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+  box-shadow: 0 0 20px rgba(125, 95, 255, 0.7), /* Stronger outer glow */
+             0 0 40px rgba(125, 95, 255, 0.5), /* Inner glow */
+             inset 0 0 10px rgba(125, 95, 255, 0.3); /* Inner glow effect */
+}
+
+/* Optional: Add a glowing border effect */
+.song-card-buttons button::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: inherit; /* Inherits the gradient */
+  border-radius: 10px;
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.song-card-buttons button:hover::after {
+  opacity: 0.8; /* Makes the glow visible on hover */
+}
+
+/* Ensure react-icons (FaHeart, FaList) inherit the white color */
+.song-card-buttons button svg {
+  color: white; /* Forces the icon color to white */
+  width: 20px; /* Matches the size prop from JSX */
+  height: 20px; /* Matches the size prop from JSX */
+}
+
+/* Custom Audio Player with Neon Style */
+.custom-audio-player {
+  width: 100%;
+  margin: 15px 0;
+  filter: invert(0.8) hue-rotate(200deg) contrast(1.2);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 240px;
+    padding: 20px 15px;
+  }
+
+  .content {
+    padding: 25px;
+  }
+
+  .song-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .sidebar nav {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .sidebar nav a {
+    flex-shrink: 0;
+  }
+}
